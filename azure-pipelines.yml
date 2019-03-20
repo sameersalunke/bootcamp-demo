@@ -19,7 +19,7 @@ steps:
     command: login
     azureSubscriptionEndpoint: AzureDevCampDemo
     azureContainerRegistry: igdevcampdemo.azurecr.io
-- script: docker build igdevcampdemo.azurecr.io/$(imageName) ./app 
+- script: docker build -t igdevcampdemo.azurecr.io/$(imageName) ./app 
 - script: docker push igdevcampdemo.azurecr.io/$(imageName)
 
    
