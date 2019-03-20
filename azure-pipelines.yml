@@ -24,6 +24,8 @@ steps:
   inputs:
     command: build
     dockerFile: app/Dockerfile
+    azureSubscriptionEndpoint: AzureDevCampDemo
+    azureContainerRegistry: igdevcampdemo.azurecr.io
     imageName: $(imageName)
 - task: Docker@1
   displayName: Push image
