@@ -14,3 +14,9 @@ variables:
 
 steps: 
 - script: docker build -t devcamp-demo:test ./app
+- task: Docker@1
+  displayName: Container registry login
+  inputs:
+    command: login
+    azureSubscriptionEndpoint: AzureDevCampDemo
+    azureContainerRegistry: igdevcampdemo.azurecr.io
