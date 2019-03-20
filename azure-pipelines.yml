@@ -19,19 +19,7 @@ steps:
     command: login
     azureSubscriptionEndpoint: AzureDevCampDemo
     azureContainerRegistry: igdevcampdemo.azurecr.io
-- task: Docker@1
-  displayName: Build image
-  inputs:
-    command: build
-    dockerFile: app/Dockerfile
-    azureSubscriptionEndpoint: AzureDevCampDemo
-    azureContainerRegistry: igdevcampdemo.azurecr.io
-    imageName: $(imageName)
-- task: Docker@1
-  displayName: Push image
-  inputs:
-    command: push
-    azureSubscriptionEndpoint: AzureDevCampDemo
-    azureContainerRegistry: igdevcampdemo.azurecr.io
-    imageName: $(imageName)
+- script: docker build igdevcampdemo.azurecr.io/$(imageName) ./app 
+- script: docker push igdevcampdemo.azurecr.io/$(imageName)
+
    
