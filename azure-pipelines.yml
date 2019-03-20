@@ -14,4 +14,4 @@ variables:
 
 steps:
 - script: cd app 
-- script: docker build -t devcamp-demo:test .
+- script: docker build -f ./app/Dockerfile -t devcamp-demo:test .
