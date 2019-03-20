@@ -29,6 +29,7 @@ steps:
   displayName: Push image
   inputs:
     command: push
-    imageName: $(imageName)
     azureSubscriptionEndpoint: AzureDevCampDemo
     azureContainerRegistry: igdevcampdemo.azurecr.io
+    imageName: $(imageName)
+   
