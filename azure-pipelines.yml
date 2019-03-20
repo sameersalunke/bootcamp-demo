@@ -29,7 +29,6 @@ steps:
   displayName: Push image
   inputs:
     command: push
-    dockerRegistryEndpoint: dockerHub
     imageName: $(imageName)
     azureSubscriptionEndpoint: AzureDevCampDemo
     azureContainerRegistry: igdevcampdemo.azurecr.io
